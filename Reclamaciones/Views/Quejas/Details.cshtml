@@ -1,0 +1,66 @@
+﻿@model Reclamaciones.Models.MetodoEnvio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MetodoEnvio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoMetodoEnvio.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoMetodoEnvio.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoMetodoOpcion.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoMetodoOpcion.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoraInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoraInicio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

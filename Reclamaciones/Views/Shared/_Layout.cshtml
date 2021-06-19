@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/home.css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -16,13 +17,34 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Distribuidora (Sistema de quejas y Reclamaciones)", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <div class="navbar-collapse collapse mt-4">
+                <ul class="nav navbar-nav" style="margin-top: 8px;">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" style="color: white; text-decoration: none;">
+                            @Html.ActionLink("Quejas", "Index", "Quejas") <span class="caret"></span>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger" style="color: white; text-decoration: none;">
+                            @Html.ActionLink("Reclamaciones", "Index", "Reclamaciones") <span class="caret"></span>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Mantenimiento <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Clientes", "Index", "Clientes")</li>
+                            <li>@Html.ActionLink("Empleados", "Index", "Empleado")</li>
+                            <li>@Html.ActionLink("Metodos", "Index", "Metodo")</li>
+                            <li>@Html.ActionLink("Opciones", "Index", "TipoMetodoOpcion")</li>
+                            <li>@Html.ActionLink("Estado", "Index", "EstadoMetodoEnvios")</li>
+                            <li>@Html.ActionLink("Departamentos", "Index", "Departamentos")</li>
+                        </ul>
+                    </div>
+
                 </ul>
             </div>
         </div>
